@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Kumbh+Sans:wght@500&family=Lora&family=Montserrat&family=Outfit:wght@400;700&family=Poppins:wght@300&display=swap');
+body
+{
+    font-family: Poppins;
+    background-color: hsl(0, 0%, 86%);
+    font-weight: bold;
+}
+.attribution
+{
+    background-color: white;
+    border-radius: 15px 15px 50px 15px ;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    padding: 10px;
+}
+.form 
+{
+    display: flex;
+    justify-content: space-around;
+
+}
+input::placeholder
+{
+    text-align: center;
+    font-size: 15px;
+}
+input:focus
+{
+    border-color: transparent; 
+}
+input 
+{
+    width: 25%;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: hsl(0, 0%, 86%);
+    border-style: solid;
+    text-align: center;
+    font-weight: bold;
+    color: hsl(0, 0%, 8%);
+    font-size: 32px;
+    padding: 10px;
+}
+@media screen and (min-width: 900px) and (max-width: 1100px)
+{
+    .attribution
+    {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1100px) 
+{
+    .attribution
+    {
+        width: 35vw;
+    }
+}
+
+#label
+{
+    display: flex;
+    justify-content:space-around;
+    color: hsl(0, 1%, 44%);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+hr
+{
+  background-color: hsl(0, 0%, 86%);  
+  border-color: hsl(0, 0%, 86%);
+  border: 0px;
+  height: 1px;
+  width: 80%;
+}
+button
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: hsl(259, 100%, 65%);
+    border: 1px;
+    border-color: hsl(259, 100%, 65%);
+    padding:13px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: hsl(0, 0%, 8%);
+}
+h1{
+    display: inline;
+    color:hsl(259, 100%, 65%); 
+    font-weight: bold;
+}
+p
+{
+    display: inline;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bolder;
+}
+.errors
+{
+    display: flex;
+    justify-content: space-around;
+    color: hsl(0, 100%, 67%);
+}
+.error
+{
+    font-size: 12px;
+    font-style: normal;
+margin-right:10% ;
+}
+h1 
+{
+    font-size: 30px;
+}
