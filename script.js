@@ -2,7 +2,21 @@
 var elements=document.querySelectorAll('input');
 var errors=document.querySelectorAll('.error');  
  var label=document.querySelectorAll('label');
-
+let valid_day = ()=>
+{
+  red(0);
+  errors[0].textContent='please enter a valid day';
+}
+let valid_month = ()=>
+{
+  red(1);
+  errors[1].textContent='please enter a valid month';
+}
+let valid_year= ()=>
+{
+  red(2);
+  errors[2].textContent='please enter a valid year';
+}
 let red=(e)=>
 {
  elements[e].style.borderColor='hsl(0, 100%, 67%)';
@@ -50,8 +64,9 @@ else
 document.querySelector('button').addEventListener('click',()=>
 {
      required(); 
-     if ( 1<=parseInt(elements[0].value)<=31 && month(parseInt(elements[1].value)) && parseInt(elements[2].value)<= new Date().getFullYear())
+     if ( 0<parseInt(elements[0].value) && month(parseInt(elements[1].value)) && parseInt(elements[2].value)<= new Date().getFullYear())
 {
+    console.log("here" + parseInt(elements[0].value));
 let day = elements[0].value;
         let month = elements[1].value;
         let year = elements[2].value;
@@ -81,6 +96,20 @@ h1[2].textContent=daysDiff.toString();
 }
 else 
 {
+if(parseInt(elements[0].value) >31 || parseInt(elements[0].value<=0))
+{
+console.log(parseInt(elements[0].value))
+valid_day();
+}
+if(!month(parseInt(elements[1].value)))
+{
+    valid_month();
+}
+if(parseInt(elements[2].value)> new Date().getFullYear())
+{
+    console.log('not a valid year');
+    valid_year();
+}
 
 }
 })
